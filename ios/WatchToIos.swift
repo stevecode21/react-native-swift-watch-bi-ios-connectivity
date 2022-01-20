@@ -78,7 +78,7 @@ class WatchToIos : NSObject, WCSessionDelegate {
             
      */
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        print("Message \(message)")
+        print("Message from watch app \(message)")
     }
     
     func session(_ session: WCSession, didReceiveMessageData messageData: Data) {
