@@ -8,9 +8,9 @@
 
 import Foundation
 import WatchConnectivity
-@objc(WatchToIos)
 
-class RNWatcher : NSObject, WCSessionDelegate {
+@objc(WatchToIos)
+class WatchToIos : NSObject, WCSessionDelegate {
     //var bridge: RCTBridge!
     
     override init() {
@@ -20,11 +20,13 @@ class RNWatcher : NSObject, WCSessionDelegate {
     
 
     
-    @objc func sendMessageData(_ data: NSData) -> Void {
+    @objc
+    func sendMessageData(_ data: NSData) {
           self._sendMessageData(data: data)
     }
     
-    @objc func sendMessage(_ data: NSDictionary) -> Void {
+    @objc
+    func sendMessage(_ data: NSDictionary) {
           self._sendMessage(data: data)
     }
     

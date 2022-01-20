@@ -6,6 +6,10 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo managed workflow\n';
 
+console.log(
+  '🚀 ~ file: index.tsx ~ line 10 ~ NativeModules.WatchToIos',
+  NativeModules.WatchToIos
+);
 const WatchToIos = NativeModules.WatchToIos
   ? NativeModules.WatchToIos
   : new Proxy(
@@ -17,6 +21,9 @@ const WatchToIos = NativeModules.WatchToIos
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return WatchToIos.multiply(a, b);
+// export function multiply(a: number, b: number): Promise<number> {
+//   return WatchToIos.multiply(a, b);
+// }
+export function sendMessage(message: { message: string }) {
+  return WatchToIos.sendMessage(message);
 }
